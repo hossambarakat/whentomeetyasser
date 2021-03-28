@@ -20,19 +20,20 @@ export default function Home() {
   const handleCalculate = () => {
     const yasserExpectedTime = selectedTime.subtract(2, 'hour');
     if(consideration == "beach") {
-      setOutcomeMessage('mmm no BBQ and sand hassle 🏖 and tell him: ')
-      setYasserTime(yasserExpectedTime.subtract(30, 'minute').format('HH:mm A'));
+      setOutcomeMessage('mmm no BBQ and sand hassle 🏖 and tell Yasser: ')
+      setYasserTime(yasserExpectedTime.subtract(30, 'minute').format('hh:mm A'));
     }
     else if (consideration == "bbq") {
-      setOutcomeMessage('Malek elmashawy is always ready 🍗 💪, just give him the people count and tell him: ')
-      setYasserTime(yasserExpectedTime.add(30, 'minute').format('HH:mm A'));
+      setOutcomeMessage('Malek elmashawy is always ready 🍗 💪, just give him the people count and tell Yasser: ')
+      setYasserTime(yasserExpectedTime.add(30, 'minute').format('hh:mm A'));
     }
     else if (consideration == "picnic") {
-      setOutcomeMessage('bring your ping pong racket 🏓 and tell him: ')
-      setYasserTime(yasserExpectedTime.format('HH:mm A'));
+      setOutcomeMessage('bring your ping pong racket 🏓 and tell Yasser: ')
+      setYasserTime(yasserExpectedTime.format('hh:mm A'));
     }
     else {
-      setYasserTime(yasserExpectedTime.format('HH:mm A'));
+      setOutcomeMessage('Probably you should tell Yasser: ')
+      setYasserTime(yasserExpectedTime.format('hh:mm A'));
     }
     
     

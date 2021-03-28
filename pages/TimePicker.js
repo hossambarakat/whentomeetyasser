@@ -8,7 +8,7 @@ const TimePicker = ({ onChange }) => {
 
     
     const handleHourChange = (event) => {
-        setHour(event.target.value);
+        setHour(parseInt(event.target.value));
         onChange(getSelectedTime(event.target.value, minute, ampm));
     }
     const handleMinuteChange = (event) => {
@@ -21,8 +21,8 @@ const TimePicker = ({ onChange }) => {
     }
 
     const getSelectedTime = (hour, minute, ampm) => {
-        var selectedHour = ampm == 'am' ? hour : hour+12;
-        return dayjs().hour(selectedHour).minute(minute);
+        var selectedHour = ampm == 'AM' ? parseInt(hour) : (parseInt(hour)+12);
+        return dayjs().hour(selectedHour).minute(parseInt(minute));
     }
 
     return (<div >
